@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wellness Studio | Practitioner Access</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <div class="brand">
+          <span class="dot"></span>
+          Wellness Studio
+        </div>
+        <a class="cta-outline" href="index.html">Back to Booking</a>
+      </header>
+
+      <section class="hero">
+        <h1>Practitioner Access</h1>
+        <p>Invite-only entry with Google Workspace SSO + MFA. Clients can still log in with Google for their bookings.</p>
+      </section>
+
+      <main class="content">
+        <div class="auth-grid">
+          <div class="auth-card">
+            <div class="section-title">
+              <span class="step-number">P</span>
+              Practitioner / Admin
+            </div>
+            <div class="info-note">SSO only. Use your studio Google Workspace account. MFA enforced by the identity provider.</div>
+            <button class="oauth-btn primary" data-role="practitioner" data-provider="google">Continue with Google</button>
+            <button class="oauth-btn" data-role="practitioner" data-provider="microsoft">Continue with Microsoft</button>
+            <div class="divider">or</div>
+            <div class="form-inline">
+              <input id="adminEmail" placeholder="Work email (invite-only)" />
+              <button class="cta-primary" type="button" id="adminMagic">Send secure magic link</button>
+              <div class="small-text">Backstop for admins who lose IdP access. Enforce MFA during magic-link redemption.</div>
+            </div>
+          </div>
+
+          <div class="auth-card">
+            <div class="section-title">
+              <span class="step-number">C</span>
+              Client Login (optional)
+            </div>
+            <div class="info-note">Clients can log in to manage bookings via SSO; no password storage. MFA follows their IdP.</div>
+            <button class="oauth-btn primary" data-role="client" data-provider="google">Sign in with Google</button>
+            <button class="oauth-btn" data-role="client" data-provider="apple">Sign in with Apple</button>
+            <div class="divider">or</div>
+            <div class="form-inline">
+              <input id="clientEmail" placeholder="client@email.com" />
+              <button class="select-btn" type="button" id="clientMagic">Send link to manage booking</button>
+              <div class="small-text">We send a one-time link + enforce MFA where supported by the provider.</div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="practitioner-login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+127.0.0.1 - - [29/Dec/2025 18:24:23] "GET /dashboard.html HTTP/1.1" 200 -
+127.0.0.1 - - [29/Dec/2025 18:24:23] "GET /styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Dec/2025 18:24:23] "GET /dashboard.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/Dec/2025 18:24:24] code 404, message File not found
+127.0.0.1 - - [29/Dec/2025 18:24:24] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [29/Dec/2025 18:24:48] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [29/Dec/2025 18:24:48] "GET /booking.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/Dec/2025 18:24:48] code 404, message File not found
+127.0.0.1 - - [29/Dec/2025 18:24:48] "GET /api/availability?start=2025-12-29&end=2026-01-28 HTTP/1.1" 404 -
+127.0.0.1 - - [29/Dec/2025 18:29:50] "GET /dashboard.html HTTP/1.1" 304 -
+127.0.0.1 - - [29/Dec/2025 18:29:50] "GET /dashboard.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/Dec/2025 19:05:59] "GET /dashboard.html HTTP/1.1" 304 -
+127.0.0.1 - - [29/Dec/2025 19:05:59] "GET /dashboard.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/Dec/2025 19:06:01] "GET /dashboard.html HTTP/1.1" 304 -
+127.0.0.1 - - [29/Dec/2025 20:26:21] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [29/Dec/2025 20:26:21] "GET /booking.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/Dec/2025 20:26:21] code 404, message File not found
+127.0.0.1 - - [29/Dec/2025 20:26:21] "GET /api/availability?start=2025-12-30&end=2026-01-29 HTTP/1.1" 404 -

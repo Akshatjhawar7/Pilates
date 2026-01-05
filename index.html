@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pilates with Paula — Homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #2d1f1a;
+        --muted: #6e584e;
+        --soft: #fffbf9;
+        --bg: #fff5f1;
+        --line: #f1d9cf;
+        --accent: #ffcabd;
+        --accent-2: #ffd580;
+        --shadow: 0 18px 50px rgba(45, 31, 26, 0.12);
+        --radius: 16px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background:
+          radial-gradient(circle at 18% 12%, rgba(200, 218, 207, 0.3), transparent 40%),
+          radial-gradient(circle at 82% 10%, rgba(215, 199, 183, 0.35), transparent 36%),
+          var(--bg);
+        color: var(--ink);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 22px 18px 90px;
+      }
+
+      /* Navigation */
+      .nav-bar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: 16px;
+        align-items: center;
+        padding: 14px 16px;
+        background: rgba(251, 249, 246, 0.95);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        backdrop-filter: blur(10px);
+        box-shadow: var(--shadow);
+      }
+
+      .logo {
+        font-family: "Playfair Display", serif;
+        font-size: 20px;
+        letter-spacing: 0.02em;
+      }
+
+      .menu {
+        display: flex;
+        justify-content: center;
+        gap: 14px;
+        flex-wrap: wrap;
+        color: var(--muted);
+        font-weight: 600;
+      }
+
+      .menu a {
+        padding: 10px 12px;
+        border-radius: 12px;
+        transition: background 0.2s ease, color 0.2s ease;
+      }
+
+      .menu a:hover {
+        color: var(--ink);
+        background: rgba(200, 218, 207, 0.4);
+      }
+
+      .menu a.active {
+        background: rgba(200, 218, 207, 0.6);
+        color: var(--ink);
+        font-weight: 700;
+      }
+
+      .nav-actions {
+        display: flex;
+        gap: 10px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 11px 16px;
+        border-radius: 14px;
+        border: 1px solid transparent;
+        font-weight: 700;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      .btn.primary {
+        background: linear-gradient(135deg, #e6d9cc, #d2c3b3);
+        color: var(--ink);
+        border: 1px solid rgba(47, 42, 36, 0.06);
+        box-shadow: 0 14px 32px rgba(47, 42, 36, 0.18);
+      }
+
+      .btn.secondary {
+        background: rgba(255, 255, 255, 0.85);
+        border: 1px solid var(--line);
+        color: var(--ink);
+      }
+
+      /* Hero */
+      .hero {
+        margin: 46px 0 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 26px;
+        align-items: center;
+      }
+
+      .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--muted);
+        margin: 0 0 8px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        color: var(--ink);
+        font-family: "Playfair Display", serif;
+        font-weight: 600;
+      }
+
+      h1 {
+        font-size: clamp(32px, 5vw, 48px);
+        line-height: 1.12;
+      }
+
+      h2 {
+        font-size: clamp(26px, 4vw, 34px);
+      }
+
+      .lead {
+        font-size: 18px;
+        line-height: 1.6;
+        color: var(--muted);
+        margin: 14px 0 0;
+        max-width: 640px;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin: 18px 0 0;
+      }
+
+      .hero-visual {
+        position: relative;
+      }
+
+      .hero-frame {
+        border-radius: 22px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        background: var(--soft);
+        box-shadow: var(--shadow);
+        min-height: 380px;
+      }
+
+      .hero-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* Sections */
+      .section {
+        padding: 50px 4px 10px;
+        display: grid;
+        gap: 22px;
+      }
+
+      .section-head {
+        display: grid;
+        gap: 10px;
+        max-width: 780px;
+      }
+
+      .muted {
+        color: var(--muted);
+        line-height: 1.6;
+        margin: 0;
+      }
+
+      /* About */
+      .about {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 18px;
+        align-items: center;
+      }
+
+      .about img {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        border-radius: 18px;
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+      }
+
+      /* Offerings */
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 14px;
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: 0 16px 34px rgba(47, 42, 36, 0.1);
+        padding: 16px;
+        display: grid;
+        gap: 12px;
+      }
+
+      .card img {
+        height: 200px;
+        min-height: 200px;
+        width: 100%;
+        border-radius: 12px;
+        object-fit: cover;
+        object-position: center;
+        background: #f1f1f1;
+      }
+
+      /* Social proof */
+      .light {
+        background: #f3eee8;
+        border-radius: 18px;
+        border: 1px solid var(--line);
+        padding: 24px 18px;
+        box-shadow: 0 12px 28px rgba(47, 42, 36, 0.08);
+      }
+
+      .quotes {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 14px;
+        margin-top: 12px;
+      }
+
+      .quote {
+        background: #fffaf4;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 14px;
+        display: grid;
+        gap: 10px;
+      }
+
+      .quote-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #e2d6c8, #cbdace);
+        border: 1px solid rgba(47, 42, 36, 0.1);
+      }
+
+      .quote-text {
+        color: var(--ink);
+        line-height: 1.5;
+        margin: 0;
+      }
+
+      /* CTA */
+      .cta {
+        text-align: center;
+        padding: 38px 18px;
+        background: linear-gradient(120deg, rgba(214, 197, 183, 0.9), rgba(200, 218, 207, 0.9));
+        border-radius: 18px;
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+        display: grid;
+        gap: 12px;
+      }
+
+      /* Footer */
+      .footer {
+        margin-top: 34px;
+        padding: 18px 0 0;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .footer-links {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .icon-placeholder {
+        width: 28px;
+        height: 28px;
+        border-radius: 10px;
+        background: rgba(47, 42, 36, 0.08);
+        display: grid;
+        place-items: center;
+        font-weight: 700;
+        color: var(--ink);
+      }
+
+      @media (max-width: 860px) {
+        .nav-bar {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .nav-actions {
+          justify-content: center;
+        }
+      }
+
+      @media (max-width: 540px) {
+        .hero-actions .btn {
+          width: 100%;
+        }
+
+        .nav-bar {
+          position: static;
+        }
+      }
+
+      /* Palette switcher */
+      .palette {
+        position: fixed;
+        bottom: 18px;
+        right: 18px;
+        display: grid;
+        gap: 10px;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        box-shadow: 0 10px 30px rgba(47, 42, 36, 0.12);
+        backdrop-filter: blur(6px);
+        max-width: 220px;
+      }
+
+      .palette-title {
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin: 0;
+      }
+
+      .palette-buttons {
+        display: grid;
+        gap: 8px;
+      }
+
+      .theme-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 12px;
+        border-radius: 12px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.92);
+        font-weight: 700;
+        color: var(--ink);
+        cursor: pointer;
+        box-shadow: 0 6px 18px rgba(47, 42, 36, 0.08);
+      }
+
+      .theme-dot {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        border: 1px solid rgba(47, 42, 36, 0.15);
+      }
+
+      /* Theme variants */
+      body.theme-midnight {
+        --ink: #f3ede6;
+        --muted: #c7c0b8;
+        --bg: #0f1921;
+        --soft: #16232d;
+        --line: #25323d;
+        --accent: #3c5d73;
+        --accent-2: #c9a58f;
+        background: linear-gradient(160deg, #0f1921, #16232d);
+      }
+
+      body.theme-midnight .page {
+        background: transparent;
+      }
+
+      body.theme-midnight .nav-bar,
+      body.theme-midnight .card,
+      body.theme-midnight .cta,
+      body.theme-midnight .light,
+      body.theme-midnight .section,
+      body.theme-midnight .hero-frame,
+      body.theme-midnight .footer {
+        background: rgba(22, 35, 45, 0.95);
+        border-color: var(--line);
+        box-shadow: 0 18px 44px rgba(0, 0, 0, 0.4);
+      }
+
+      body.theme-midnight .quotes .quote {
+        background: rgba(22, 35, 45, 0.9);
+      }
+
+      body.theme-midnight .menu a:hover {
+        background: rgba(60, 93, 115, 0.3);
+      }
+
+      body.theme-midnight .btn.primary {
+        background: linear-gradient(135deg, #3c5d73, #c9a58f);
+        color: #0f1921;
+      }
+
+      body.theme-midnight .btn.secondary,
+      body.theme-midnight .card {
+        background: rgba(22, 35, 45, 0.9);
+      }
+
+      body.theme-sky {
+        --ink: #122130;
+        --muted: #4f6173;
+        --bg: #f3f8ff;
+        --soft: #eaf3ff;
+        --line: #d4e3f5;
+        --accent: #8fc7ff;
+        --accent-2: #7be0c3;
+        background:
+          radial-gradient(circle at 20% 10%, rgba(143, 199, 255, 0.3), transparent 38%),
+          radial-gradient(circle at 78% 6%, rgba(123, 224, 195, 0.28), transparent 36%),
+          var(--bg);
+      }
+
+      body.theme-sky .nav-bar,
+      body.theme-sky .card,
+      body.theme-sky .cta,
+      body.theme-sky .light,
+      body.theme-sky .section,
+      body.theme-sky .hero-frame,
+      body.theme-sky .footer {
+        box-shadow: 0 16px 38px rgba(18, 33, 48, 0.14);
+        border-color: var(--line);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <!-- Navigation -->
+      <header class="nav-bar">
+        <div class="logo">Pilates with Paula</div>
+        <nav class="menu">
+          <a href="index.html">Home</a>
+          <a href="classes.html">Classes</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <a class="btn primary" href="https://www.wixbookings.com/book-now">Book a Class</a>
+        </div>
+      </header>
+
+      <main>
+        <!-- Hero -->
+        <section class="hero" id="home">
+          <div>
+            <p class="eyebrow">Mindful Movement</p>
+            <h1>Move with Strength. Flow with Confidence.</h1>
+            <p class="lead">
+              Online & in-studio Pilates designed to build strength, mobility, and balance.
+            </p>
+            <div class="hero-actions">
+              <a class="btn primary" href="classes.html">Explore Classes</a>
+              <a class="btn secondary" href="https://www.youtube.com/@pilates.withpaula" target="_blank" rel="noreferrer">Watch Videos</a>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="hero-frame">
+              <img
+                src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1400&q=80"
+                alt="Placeholder Pilates movement"
+              />
+            </div>
+          </div>
+        </section>
+
+        <!-- About Preview -->
+        <section class="section" id="about">
+          <div class="about">
+            <img
+              src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80"
+              alt="Placeholder portrait"
+            />
+            <div>
+              <p class="eyebrow">Meet Paula</p>
+              <h2>A grounded, form-first approach to feeling strong.</h2>
+              <p class="muted">
+                Paula blends classical Pilates, mindful strength, and mobility work to help you move with ease. Expect
+                clear cues, supportive pacing, and programming that fits your lifestyle—whether you’re joining online or
+                in the studio.
+              </p>
+              <div class="hero-actions">
+                <a class="btn secondary" href="about.html">Learn More About Paula</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Offerings Overview -->
+        <section class="section" id="classes">
+          <div class="section-head">
+            <p class="eyebrow">Offerings</p>
+            <h2>Classes designed for every stage of your practice.</h2>
+            <p class="muted">Choose your path—steady mat work, reformer power, or curated challenges that fit your rhythm.</p>
+          </div>
+          <div class="card-grid">
+            <article class="card">
+              <img
+                src="images/insta-1.jpg"
+                alt="Placeholder mat Pilates"
+              />
+              <div>
+                <h3>Mat Pilates</h3>
+                <p class="muted">Foundational sequences, breath-led flow, and core strength you can take anywhere.</p>
+              </div>
+              <a class="btn secondary" href="classes.html">View Details</a>
+            </article>
+            <article class="card">
+              <img
+                src="images/insta-2.jpg"
+                alt="Placeholder reformer Pilates"
+              />
+              <div>
+                <h3>Reformer Pilates</h3>
+                <p class="muted">Strength-building sessions with precise form, resistance, and supportive coaching.</p>
+              </div>
+              <a class="btn secondary" href="classes.html">View Details</a>
+            </article>
+            <article class="card">
+              <img
+                src="images/insta-4.jpg"
+                alt="Placeholder challenge programs"
+              />
+              <div>
+                <h3>Challenges & Programs</h3>
+                <p class="muted">Curated progressions with weekly goals to build mobility, balance, and confidence.</p>
+              </div>
+              <a class="btn secondary" href="classes.html">View Details</a>
+            </article>
+          </div>
+        </section>
+
+        <!-- Social Proof -->
+        <section class="section light" id="social-proof">
+          <div class="section-head">
+            <p class="eyebrow">What clients say</p>
+            <h2>Supportive, intentional, and form-first coaching.</h2>
+          </div>
+          <div class="quotes">
+            <div class="quote">
+              <div class="quote-avatar"></div>
+              <p class="quote-text">“Paula’s classes make me feel both strong and calm. The cues are so clear.”</p>
+            </div>
+            <div class="quote">
+              <div class="quote-avatar"></div>
+              <p class="quote-text">“I love the small class size—every session feels personal and encouraging.”</p>
+            </div>
+            <div class="quote">
+              <div class="quote-avatar"></div>
+              <p class="quote-text">“Her online flows fit perfectly between meetings and keep my back happy.”</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section" id="contact">
+          <div class="cta">
+            <h2>Ready to move better and feel stronger?</h2>
+            <a class="btn primary" href="https://www.wixbookings.com/book-now">Book Your First Class</a>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div>
+          © Pilates with Paula. All rights reserved. · Powered by
+          <a href="https://mightyiq.ca" target="_blank" rel="noreferrer">MightyIQ Inc.</a>
+        </div>
+        <div class="footer-links">
+          <div class="icon-placeholder">IG</div>
+          <div class="icon-placeholder">@</div>
+          <span>hello@pilateswithpaula.com</span>
+        </div>
+      </footer>
+    </div>
+
+    <div class="palette">
+      <p class="palette-title">Design options</p>
+      <div class="palette-buttons">
+        <button class="theme-btn" data-theme="">
+          <span class="theme-dot" style="background: linear-gradient(135deg, #ffcabd, #ffd580)"></span>
+          Blush Dawn (default)
+        </button>
+        <button class="theme-btn" data-theme="theme-sky">
+          <span class="theme-dot" style="background: linear-gradient(135deg, #8fc7ff, #7be0c3)"></span>
+          Sky Mist
+        </button>
+        <button class="theme-btn" data-theme="theme-midnight">
+          <span class="theme-dot" style="background: linear-gradient(135deg, #3c5d73, #c9a58f)"></span>
+          Midnight Bloom
+        </button>
+      </div>
+    </div>
+
+    <script>
+      const themeButtons = document.querySelectorAll(".theme-btn");
+      const bodyEl = document.body;
+
+      themeButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          bodyEl.classList.remove("theme-sky", "theme-midnight");
+          const theme = btn.getAttribute("data-theme");
+          if (theme) bodyEl.classList.add(theme);
+        });
+      });
+
+      // Highlight active nav link
+      const currentPage = window.location.pathname.split("/").pop() || "index.html";
+      document.querySelectorAll(".menu a").forEach((link) => {
+        const linkPage = link.getAttribute("href");
+        if (linkPage && currentPage.endsWith(linkPage)) {
+          link.classList.add("active");
+        }
+      });
+    </script>
+  </body>
+</html>

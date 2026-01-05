@@ -1,0 +1,47 @@
+%PDF-1.4
+1 0 obj << /Type /Catalog /Pages 2 0 R >> endobj
+2 0 obj << /Type /Pages /Kids [3 0 R] /Count 1 >> endobj
+3 0 obj << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >> endobj
+4 0 obj << /Length 2421 >> stream
+BT /F1 11 Tf 50 780 Td (Wellness Studio Booking Demo — Quick Start & Integration Notes) Tj ET
+BT /F1 11 Tf 50 748 Td (Run locally: python3 -m http.server 9000 --bind 127.0.0.1) Tj ET
+BT /F1 11 Tf 50 732 Td (Booking page:      http://127.0.0.1:9000/index.html) Tj ET
+BT /F1 11 Tf 50 716 Td (Dashboard:         http://127.0.0.1:9000/dashboard.html) Tj ET
+BT /F1 11 Tf 50 700 Td (Practitioner SSO:  http://127.0.0.1:9000/practitioner-login.html) Tj ET
+BT /F1 11 Tf 50 684 Td (Client SSO:        http://127.0.0.1:9000/client-auth.html) Tj ET
+BT /F1 11 Tf 50 668 Td (Files: index.html, dashboard.html, practitioner-login.html, client-auth.html,) Tj ET
+BT /F1 11 Tf 50 652 Td (      booking.js, dashboard.js, practitioner-login.js, client-auth.js, styles.css) Tj ET
+BT /F1 11 Tf 50 636 Td (Data note: all data is sample; wire JS arrays to your API/IdP.) Tj ET
+BT /F1 11 Tf 50 604 Td (Availability \(booking.js scaffold\):) Tj ET
+BT /F1 11 Tf 50 588 Td ( - Expose GET /api/availability?start=YYYY-MM-DD&end=YYYY-MM-DD) Tj ET
+BT /F1 11 Tf 50 572 Td (   returns [{date:"2025-01-02", slots:["09:00 AM","10:30 AM"]}]) Tj ET
+BT /F1 11 Tf 50 556 Td ( - loadAvailability\(\) fetches this; falls back to seeded data on failure.) Tj ET
+BT /F1 11 Tf 50 540 Td ( - After load, selectedDate/Time set from first available slot and rendered.) Tj ET
+BT /F1 11 Tf 50 508 Td (Book a slot \(booking.js scaffold\):) Tj ET
+BT /F1 11 Tf 50 492 Td ( - POST /api/book with service/date/time/name/email/notes/price) Tj ET
+BT /F1 11 Tf 50 476 Td ( - On error, show message and let user pick another slot.) Tj ET
+BT /F1 11 Tf 50 444 Td (Payments/Stripe:) Tj ET
+BT /F1 11 Tf 50 428 Td ( - After reserving, create Checkout Session server-side and redirect client.) Tj ET
+BT /F1 11 Tf 50 396 Td (Auth:) Tj ET
+BT /F1 11 Tf 50 380 Td ( - Practitioner login is invite-only SSO/MFA \(wire buttons to your IdP\).) Tj ET
+BT /F1 11 Tf 50 364 Td ( - Client login uses SSO or magic-link; no passwords stored.) Tj ET
+BT /F1 11 Tf 50 332 Td (Developer handoff:) Tj ET
+BT /F1 11 Tf 50 316 Td ( - Review the stubs above and replace with your endpoints/IdP details.) Tj ET
+BT /F1 11 Tf 50 300 Td ( - Add inline loading/error states if desired after wiring APIs.) Tj ET
+BT /F1 11 Tf 50 284 Td ( - Please confirm open questions and send feedback to the owner \(add contact here\).) Tj ET
+BT /F1 10 Tf 50 40 Td (Copyright © MightyIQ Inc. 2025. All rights reserved.) Tj ET
+endstream endobj
+5 0 obj << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000002711 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+2781
+%%EOF

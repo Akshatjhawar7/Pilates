@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wellness Studio | Client Login</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <div class="brand">
+          <span class="dot"></span>
+          Wellness Studio
+        </div>
+        <div class="top-actions">
+          <a class="cta-outline" href="index.html">Back to Booking</a>
+        </div>
+      </header>
+
+      <section class="hero">
+        <h1>Client Login</h1>
+        <p>Manage bookings with Google-first SSO or a magic link. No passwords to remember.</p>
+      </section>
+
+      <main class="content">
+        <div class="card tight">
+          <div class="section-title">
+            <span class="step-number">C</span>
+            Sign in or Sign up
+          </div>
+          <div class="info-note">This is for clients only. Practitioners use the invite-only practitioner login.</div>
+          <div class="auth-grid">
+            <div class="auth-card">
+              <button class="oauth-btn primary" data-provider="google">Continue with Google</button>
+              <button class="oauth-btn" data-provider="apple">Continue with Apple</button>
+              <button class="oauth-btn" data-provider="microsoft">Continue with Microsoft</button>
+              <div class="divider">or</div>
+              <div class="form-inline">
+                <input id="clientEmail" placeholder="you@example.com" />
+                <button class="select-btn" type="button" id="clientMagic">Email me a one-time link</button>
+                <div class="small-text">One-time link to manage or confirm your booking. MFA follows your provider.</div>
+              </div>
+            </div>
+            <div class="auth-card">
+              <div class="label-strong">Why SSO?</div>
+              <div class="muted">More secure than passwords, easy recovery, and MFA supported by your provider.</div>
+              <div class="info-note">Need help? Contact the studio to verify your email and resend a secure link.</div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="client-auth.js"></script>
+  </body>
+</html>
